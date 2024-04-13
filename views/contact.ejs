@@ -1,0 +1,38 @@
+<html>
+
+<head>
+  <title>Rehaanm03 Tools</title>
+  <link rel="stylesheet" href="assets/styles.css" type="text/css" />
+</head>
+
+<body>
+  <%- include('partials/nav.ejs') %>
+  <p class='plainText'>This is the contact page</p>
+
+  <form id="contact-form" method="POST" action="/contact">
+    <label for="site">What Site?</label>
+    <br>
+    <br>
+    <div class="box">
+      <select name="site" id="site" class="site">
+        <option value="bestbuy">Bestbuy</option>
+        <option value="target">Target</option>
+        <option value="undefeated">Undefeated</option>
+      </select>
+    </div>
+    <br>
+    <br>
+    <label for="key">What is your Key?</label>
+    <input type="text" name="key" value="<%= qs.key %>" />
+    <label for="email">Your Email</label>
+    <input for="email" name="email" />
+    <input type="submit" class="submitButton" value="Find Your Key" />
+  </form>
+
+  <script>
+    document.querySelector('.submitButton').value = 'Find Your Key'
+  </script>
+
+</body>
+
+</html>

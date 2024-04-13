@@ -1,0 +1,83 @@
+<!Doctype html>
+<html>
+
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="../../assets/styles.css" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/assets/main.css">
+  <link rel="stylesheet1" type="text/css" href="/pages/somefile.ejs">
+  <style>
+    .discordContainer a {
+      background: #7289DA;
+      padding: 0 20px;
+      line-height: 35px;
+      color: #fff;
+      font-family: 'Helvetica', 'Arial', sans-sefir;
+      font-size: 20px;
+      display: block;
+      text-decoration: none;
+      border-radius: 3px;
+    }
+
+    .discordContainer {
+      font-size: 1vw;
+      text-align: center;
+      position: absolute;
+      width: 30%;
+      height: 30%;
+      left: 35%;
+      top: 17%;
+    }
+
+    /* .discordContainer {
+      position: absolute;
+      width: 210px;
+      height: 150px;
+      left: 1100px;
+      top: 103px;
+      text-align: center;
+      border: 3px solid green;
+    }  */
+
+    .switchLogin {
+      text-align: center;
+      position: absolute;
+      height: 750px;
+      width: 155px;
+      left: 557px;
+      top: 103px;
+    }
+
+    .oldDashboard {
+      position: absolute;
+      width: 320px;
+      height: 750px;
+      left: 857px;
+      top: 103px;
+      /* display: flex;
+      width: 50%;
+      padding: 40px 0;
+      align-items: right;
+      justify-content: right; */
+    }
+
+    .input {
+      color: black;
+    }
+  </style>
+</head>
+
+<body class="dashboardBody">
+  <!-- <%- include('partials/nav.ejs') %> -->
+  <div class="discordContainer">
+    <h3 class="whiteTextOverride">Login Here</h3>
+    <p class="pError"><%= error.v2Error %></p>
+    <br>
+    <a href="/api/discord/login">Login with Discord</a>
+  </div>
+</body>
+
+</html>

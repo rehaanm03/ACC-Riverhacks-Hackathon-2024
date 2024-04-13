@@ -1,0 +1,202 @@
+body {
+    background-color: #212529;
+    line-height: 1.42857143;
+}
+
+.dashboardBody {
+    background-color: #212529;
+    line-height: 1.42857143;
+}
+
+p {
+    color: #FFFFFF;
+}
+
+h1 {
+    color: white;
+    /* text-decoration: underline; */
+}
+
+h2 {
+    color: white;
+    /* text-decoration: underline; */
+}
+
+h3 {
+    color: white;
+    /* text-decoration: underline; */
+    font-size: 24px;
+}
+
+.whiteTextOverride {
+    color: white;
+}
+
+.whiteTextOverrideSuccess {
+    color: white;
+    text-align: center;
+}
+
+
+h5 {
+    color: white;
+    /* text-decoration: underline; */
+    font-size: 24px;
+}
+
+.col-md-6 {
+    color: white;
+}
+
+.code {
+    background-color: rgb(46, 45, 45);
+    color: crimson;
+}
+
+li {
+    color: white;
+}
+
+nav {
+    text-align: center;
+}
+
+/* .jumbotron {
+  margin-bottom: 30px;
+  background-color:#532F8C;
+  padding-bottom: 80px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* .subtitle { */
+/* opacity: 0.50; */
+/* color: #d9ccee; */
+/* } */
+
+/* .jumbotron p {
+  color: #d9ccee;
+  max-width: 75%;
+  margin: 1em auto 2em;
+} */
+
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.discordSeverText:link,
+.discordSeverText:visited {
+    color: rgb(0, 217, 255);
+    font-size: 18px;
+    background-color: #0080ff25;
+    padding: 4px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.discordSeverText:hover {
+    color: rgba(0, 217, 255, 0.425);
+    text-decoration: underline;
+
+}
+
+.nav:link,
+.nav:visited {
+    background-color: red;
+    color: white;
+    padding: 4px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.nav:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* .nav:active { */
+/* color: black; */
+/* background-color: rgb(170, 3, 3); */
+/* } */
+
+h1.profileText {
+    color: white;
+}
+
+.plainText {
+    color: #FFFFFF;
+}
+
+select {
+    color: black;
+    width: auto;
+    background-color: rgb(136, 136, 136);
+    border-color: black;
+}
+
+form {
+    color: #FFFFFF;
+    width: 400px;
+    /* max-width: 100%; */
+    padding: 20px;
+    /* margin: 20px auto; */
+}
+
+.profileContainer {
+    /* font-size: 3.2vw; */
+    color: #FFFFFF;
+    width: 766px;
+    /* max-width: 100%; */
+    padding: 20px;
+    /* margin: 20px auto; */
+}
+
+.pError {
+    color: red;
+}
+
+.input {
+    color: black;
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+}
+
+input[type='submit'] {
+    width: auto;
+    background-color: rgb(136, 136, 136);
+}
+
+.submitButton {
+    border: none;
+    width: auto;
+    cursor: pointer;
+
+    background-color: rgb(136, 136, 136);
+    color: black;
+    padding: 4px 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.submitButton:hover {
+    text-decoration: underline;
+}
+
+.submitButton:active {
+    /* color: black; */
+    background-color: rgb(80, 79, 79);
+}
+
+.mainText {
+    text-align: center;
+}

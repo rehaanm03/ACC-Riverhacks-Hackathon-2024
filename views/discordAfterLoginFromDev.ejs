@@ -1,0 +1,358 @@
+<!Doctype html>
+<html>
+
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../../assets/styles.css" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/assets/main.css">
+  <link rel="stylesheet1" type="text/css" href="/pages/somefile.ejs">
+  <style>
+    .mainError {
+      color: red;
+    }
+
+    .c1-ui-state-hover {
+      background-color: yellow !important;
+      padding: 5px !important
+    }
+
+    .mainSquare {
+      position: relative;
+    }
+
+    .square1 {
+      font-size: 1vw;
+      text-align: center;
+      position: absolute;
+      width: 30%;
+      height: 30%;
+      left: 8.5%;
+      top: 27%;
+    }
+
+    .titleApp {
+      font-size: 2vw;
+    }
+
+    .square3 {
+      font-size: 1vw;
+      text-align: center;
+      position: absolute;
+      width: 30%;
+      height: 30%;
+      left: 8.5%;
+      top: 65%;
+    }
+
+    .square2 {
+      font-size: 1vw;
+      text-align: center;
+      position: absolute;
+      width: 30%;
+      height: 30%;
+      left: 65%;
+      top: 27%;
+    }
+
+    .square4 {
+      font-size: 1vw;
+      text-align: center;
+      position: absolute;
+      width: 30%;
+      height: 30%;
+      left: 65%;
+      top: 65%;
+    }
+
+    .square6 {
+      font-size: 1vw;
+      text-align: center;
+      position: absolute;
+      width: 30%;
+      height: 45%;
+      left: 65%;
+      top: 110%;
+    }
+
+    .square5 {
+      font-size: 1vw;
+      text-align: center;
+      position: absolute;
+      width: 30%;
+      height: 45%;
+      left: 8.5%;
+      top: 110%;
+    }
+
+    .square7 {
+      font-size: 1vw;
+      text-align: center;
+      position: absolute;
+      width: 30%;
+      height: 45%;
+      left: 8.5%;
+      top: 150%;
+    }
+
+    .centerText {
+      font-size: 2.5vw;
+      text-align: center;
+      position: absolute;
+      width: 50%;
+      height: 25%;
+      left: 25%;
+      top: 9%;
+    }
+
+    .logoutLblPos {
+      font-size: 2vw;
+      position: fixed;
+      left: 10px;
+      top: 90%;
+    }
+
+    .resetKeyButton {
+      background-color: rgb(136, 136, 136);
+      font-size: 2vw;
+    }
+
+    .logoContainer {
+      font-size: 2vw;
+      position: absolute;
+      left: 1;
+      top: 10;
+    }
+
+    .logo {
+      display: block;
+      background: #212529;
+      border-radius: 50%;
+      overflow: hidden;
+      max-width: 102%;
+      height: auto;
+      width: 130px;
+      height: 130px;
+      margin: 2px;
+      border: 2px solid white;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hideElement {
+      display: none;
+    }
+
+    div.fixed {
+      background-color: #212529;
+      font-size: 1.5vw;
+      text-align: center;
+      color: white;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 25%;
+      border: 5px solid #0059ff;
+    }
+  </style>
+</head>
+
+<body class="dashboardBody">
+  <%- include('partials/nav.ejs') %>
+  <div class="profileContainer">
+    <div class="centerText">
+      <p>Hello Developer: <%= developer.discordName %></p>
+      <p>Showing Products</p>
+      <p>For: <%= user.discordID %></p>
+      <p class="pError"><%= error.error %></p>
+    </div>
+    <!-- <div class="logoContainer">
+      <a href="/api/discord/callback" class="logo">
+        <img src="https://cdn.discordapp.com/avatars/DiscordID/AvatarID.png">
+      </a>
+    </div> -->
+    <div class="square1">
+      <p class="titleApp">Target Catchall Account Gen</p>
+      <p class="mainError targetCatchallErrorMessage"><%= error.targetCatchall %></p>
+      <p class="" id="targetCatchallGenInfo"><b>Key:</b> <%= tools.targetCatchall.key %></p>
+      <p class="" id="targetCatchallGenInfo"><b>Email:</b> <%= tools.targetCatchall.email %></p>
+      <p class="" id="targetCatchallGenInfo"><b>Activated on a Machine:</b> <%= tools.targetCatchall.activated %></p>
+      <form id="reset-form-target-catchall" method="POST" action="/resetMachine2">
+        <input type="hidden" for="tool" name="tool" value="target catchall account gen">
+        <input type="hidden" for="key" name="key" value="<%= tools.targetCatchall.key %>" class="input" />
+        <input type="hidden" for="email" name="email" value="<%= tools.targetCatchall.email %>" class="input" />
+        <!-- <label class="resetKeyButton">
+          <input type="submit" id="resetTarget" value="Reset Key">
+        </label> -->
+      </form>
+      <button id="target-account-gen-catchall-reset-button" class="resetKeyButton resetTargetCatchall" type="submit" form="reset-form-target-catchall">Reset Key</button>
+    </div>
+
+    <div class="square2">
+      <p class="titleApp">Target Hardemail Account Gen</p>
+      <p class="mainError targetHardemailErrorMessage"><%= error.targetHardemail %></p>
+      <p class="" id="targetHardemailGenInfo"><b>Key:</b> <%= tools.targetHardemail.key %></p>
+      <p class="" id="targetHardemailGenInfo"><b>Email:</b> <%= tools.targetHardemail.email %></p>
+      <p class="" id="targetHardemailGenInfo"><b>Activated on a Machine:</b> <%= tools.targetHardemail.activated %></p>
+      <form id="reset-form-target-hardemail" method="POST" action="/resetMachine2">
+        <input type="hidden" for="tool" name="tool" value="target hardemail account gen">
+        <input type="hidden" for="key" name="key" value="<%= tools.targetHardemail.key %>" class="input" />
+        <input type="hidden" for="email" name="email" value="<%= tools.targetHardemail.email %>" class="input" />
+        <!-- <label class="resetKeyButton">
+          <input type="submit" id="resetCookieGen" value="Reset Key">
+        </label> -->
+      </form>
+      <button id="target-account-gen-hardemail-reset-button" class="resetKeyButton resetTargetHardemail" type="submit" form="reset-form-target-hardemail">Reset Key</button>
+    </div>
+  </div>
+
+    <div class="square7">
+      <p class="titleApp">Rehaan BestBuy Bot</p>
+      <p class="mainError bestbuyBotErrorMessage"><%= error.bestbuyBot %></p>
+      <p class="" id="bestbuyInfo"><b>Key:</b> <%= tools.bestbuy.key %></p>
+      <p class="" id="bestbuyInfo"><b>Email:</b> <%= tools.bestbuy.email %></p>
+      <p class="" id="bestbuyInfo"><b>Activated on a Machine:</b> <%= tools.bestbuy.activated %></p>
+      <form id="reset-form-bestbuy-bot" method="POST" action="/resetMachine2">
+        <input type="hidden" for="tool" name="tool" value="best buy bot">
+        <input type="hidden" for="key" name="key" value="<%= tools.bestbuy.key %>" class="input" />
+        <input type="hidden" for="email" name="email" value="<%= tools.bestbuy.email %>" class="input" />
+        <!-- <label class="resetKeyButton">
+          <input type="submit" id="resetBestbuy" value="Reset Key">
+        </label> -->
+      </form>
+      <button id="bestbuy-account-gen-bot-reset-button" class="resetKeyButton resetBestbuyBot" type="submit" form="reset-form-bestbuy-bot">Reset Key</button>
+    </div>
+
+    <div class="square6">
+      <p class="titleApp">Undefeated Account Gen</p>
+      <p class="mainError undefeatedErrorMessage"><%= error.undefeated %></p>
+      <p class="" id="undefeatedInfo"><b>Key:</b> <%= tools.undefeated.key %></p>
+      <p class="" id="undefeatedInfo"><b>Email:</b> <%= tools.undefeated.email %></p>
+      <p class="" id="undefeatedInfo"><b>Activated on a Machine:</b> <%= tools.undefeated.activated %></p>
+      <form id="reset-form-undefeated" method="POST" action="/resetMachine2">
+        <input type="hidden" for="tool" name="tool" value="undefeated account gen">
+        <input type="hidden" for="key" name="key" value="<%= tools.undefeated.key %>" class="input" />
+        <input type="hidden" for="email" name="email" value="<%= tools.undefeated.email %>" class="input" />
+        <!-- <label class="resetKeyButton">
+          <input type="submit" id="resetUndefeated" value="Reset Key">
+        </label> -->
+      </form>
+      <button id="undefeated-account-gen-reset-button" class="resetKeyButton resetUndefeated" type="submit" form="reset-form-undefeated">Reset Key</button>
+    </div>
+
+  <div class="square4">
+      <p class="titleApp">Bestbuy Catchall Account Gen</p>
+      <p class="mainError bestbuyCatchallErrorMessage"><%= error.bestbuyCatchallGen %></p>
+      <p class="" id="bestbuyCatchallGenInfo"><b>Key:</b> <%= tools.bestbuyCatchallGen.key %></p>
+      <p class="" id="bestbuyCatchallGenInfo"><b>Email:</b> <%= tools.bestbuyCatchallGen.email %></p>
+      <p class="" id="bestbuyCatchallGenInfo"><b>Activated on a Machine:</b> <%= tools.bestbuyCatchallGen.activated %></p>
+      <form id="reset-form-bestbuyGen" method="POST" action="/resetMachine2">
+        <input type="hidden" for="tool" name="tool" value="bestbuy catchall account gen">
+        <input type="hidden" for="key" name="key" value="<%= tools.bestbuyCatchallGen.key %>" class="input" />
+        <input type="hidden" for="email" name="email" value="<%= tools.bestbuyCatchallGen.email %>" class="input" />
+        <!-- <label class="resetKeyButton">
+          <input type="submit" id="resetCookieGen" value="Reset Key">
+        </label> -->
+      </form>
+      <button id="bestbuy-account-gen-catchall-reset-button" class="resetKeyButton resetBestbuyCatchall" type="submit" form="reset-form-bestbuyGen">Reset Key</button>
+    </div>
+  </div>
+
+  <div class="square5">
+      <p class="titleApp">Bestbuy Hardemail Account Gen</p>
+      <p class="mainError bestbuyHardemailErrorMessage"><%= error.bestbuyHardemailGen %></p>
+      <p class="" id="bestbuyHardemailGenInfo"><b>Key:</b> <%= tools.bestbuyHardemailGen.key %></p>
+      <p class="" id="bestbuyHardemailGenInfo"><b>Email:</b> <%= tools.bestbuyHardemailGen.email %></p>
+      <p class="" id="bestbuyHardemailGenInfo"><b>Activated on a Machine:</b> <%= tools.bestbuyHardemailGen.activated %></p>
+      <form id="reset-form-bestbuyGen-hardemail" method="POST" action="/resetMachine2">
+        <input type="hidden" for="tool" name="tool" value="bestbuy hardemail account gen">
+        <input type="hidden" for="key" name="key" value="<%= tools.bestbuyHardemailGen.key %>" class="input" />
+        <input type="hidden" for="email" name="email" value="<%= tools.bestbuyHardemailGen.email %>" class="input" />
+        <!-- <label class="resetKeyButton">
+          <input type="submit" id="resetCookieGen" value="Reset Key">
+        </label> -->
+      </form>
+      <button id="bestbuy-account-gen-hardemail-reset-button" class="resetKeyButton resetBestbuyHardemail" type="submit" form="reset-form-bestbuyGen-hardemail">Reset Key</button>
+    </div>
+  </div>
+
+  <div class="square3">
+      <p class="titleApp">Target Account Unlocker</p>
+      <p class="mainError targetUnlockerErrorMessage"><%= error.targetUnlocker %></p>
+      <p class="" id="targetUnlockerInfo"><b>Key:</b> <%= tools.targetUnlocker.key %></p>
+      <p class="" id="targetUnlockerInfo"><b>Email:</b> <%= tools.targetUnlocker.email %></p>
+      <p class="" id="targetUnlockerInfo"><b>Activated on a Machine:</b> <%= tools.targetUnlocker.activated %></p>
+      <!-- <form id="reset-form-bestbuyGen-hardemail" method="POST" action="/resetMachine2"> -->
+        <!-- <input type="hidden" for="tool" name="tool" value="bestbuy hardemail account gen"> -->
+        <!-- <input type="hidden" for="key" name="key" value="<%= tools.targetUnlocker.key %>" class="input" /> -->
+        <!-- <input type="hidden" for="email" name="email" value="<%= tools.targetUnlocker.email %>" class="input" /> -->
+        <!-- <label class="resetKeyButton">
+          <input type="submit" id="resetCookieGen" value="Reset Key">
+        </label> -->
+      <!-- </form> -->
+      <!-- <button id="bestbuy-account-gen-hardemail-reset-button" class="resetKeyButton resetBestbuyHardemail" type="submit" form="reset-form-bestbuyGen-hardemail">Reset Key</button> -->
+      <button id="target-unlocker-reset-button" class="resetKeyButton resetTargetUnlocker" type="submit" form="reset-form-targetUnlocker">Resetting Not Allowed Yet</button>
+    </div>
+  </div>
+
+  <br>
+  <div class="fixed">
+    Scroll Down For More Tools
+  </div>
+
+  <form align="left" method="get" action="/api/discord/signout">
+    <label class="logoutLblPos">
+      <input type="submit" id="submit" value="LOG OUT">
+    </label>
+  </form>
+  </input>
+</body>
+
+<script>
+  if (document.querySelector('.bestbuyBotErrorMessage').innerText !== "") {
+    document.querySelector('#bestbuy-account-gen-bot-reset-button').attributes["class"].value = "hidden"
+    document.querySelectorAll('#bestbuyInfo').forEach(element => {
+      element.attributes["class"].value = "hideElement"
+    });
+  }
+  if (document.querySelector('.bestbuyCatchallErrorMessage').innerText !== "") {
+    document.querySelector('#bestbuy-account-gen-catchall-reset-button').attributes["class"].value = "hidden"
+    document.querySelectorAll('#bestbuyCatchallGenInfo').forEach(element => {
+      element.attributes["class"].value = "hideElement"
+    });
+  }
+  if (document.querySelector('.bestbuyHardemailErrorMessage').innerText !== "") {
+    document.querySelector('#bestbuy-account-gen-hardemail-reset-button').attributes["class"].value = "hidden"
+    document.querySelectorAll('#bestbuyHardemailGenInfo').forEach(element => {
+      element.attributes["class"].value = "hideElement"
+    });
+  }
+  if (document.querySelector('.targetCatchallErrorMessage').innerText !== "") {
+    document.querySelector('#target-account-gen-catchall-reset-button').attributes["class"].value = "hidden"
+    document.querySelectorAll('#targetCatchallGenInfo').forEach(element => {
+      element.attributes["class"].value = "hideElement"
+    });
+  }
+  if (document.querySelector('.targetHardemailErrorMessage').innerText !== "") {
+    document.querySelector('#target-account-gen-hardemail-reset-button').attributes["class"].value = "hidden"
+    document.querySelectorAll('#targetHardemailGenInfo').forEach(element => {
+      element.attributes["class"].value = "hideElement"
+    });
+  }
+  if (document.querySelector('.undefeatedErrorMessage').innerText !== "") {
+    document.querySelector('#undefeated-account-gen-reset-button').attributes["class"].value = "hidden"
+    document.querySelectorAll('#undefeatedInfo').forEach(element => {
+      element.attributes["class"].value = "hideElement"
+    });
+  }
+  if (document.querySelector('.targetUnlockerErrorMessage').innerText !== "") {
+    document.querySelector('#target-unlocker-reset-button').attributes["class"].value = "hidden"
+    document.querySelectorAll('#targetUnlockerInfo').forEach(element => {
+      element.attributes["class"].value = "hideElement"
+    });
+  }
+</script>
+
+</html>
