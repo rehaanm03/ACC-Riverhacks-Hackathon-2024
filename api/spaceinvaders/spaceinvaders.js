@@ -14,8 +14,8 @@ let highScore;
 
 function preload()
 {
-    shipImage = loadImage("spaceinvaders/assets/ship.png");
-    alienImage = loadImage("spaceinvaders/assets/alien.png");
+    shipImage = loadImage("/api/spaceinvaders/assets/ship.png");
+    alienImage = loadImage("/api/spaceinvaders/assets/alien.png");
 }
 
 function setup()

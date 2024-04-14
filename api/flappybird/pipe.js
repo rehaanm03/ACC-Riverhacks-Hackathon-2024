@@ -24,6 +24,8 @@ class Pipe
             let newY = Math.random() * height;
             this.setY(newY);
             ++score;
+            updateScore(score)
+
         }
     }
 
