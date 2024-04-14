@@ -59,6 +59,8 @@ function keyPressed()
         case GameState.GAMEOVER:
             if (key == 'r')
             {
+                movingLeft = false;
+                movingRight = false;
                 alienSpawnTimer = 0;
                 alienSpawnMaxTime = 1000;
                 lives = 3;
@@ -67,6 +69,10 @@ function keyPressed()
                 while (aliens.length > 0)
                 {
                     aliens.pop();
+                }
+                while (bullets.length > 0)
+                {
+                    bullets.pop();
                 }
                 gameState = GameState.PLAYING;
             }
