@@ -13,7 +13,7 @@ const scopes = "identify guilds guilds.join"
 
 // const urlPrefix = "http://localhost:5000"
 // https://hackathon2024-9e9v0z6ab-rehaanm03s-projects.vercel.app/
-const urlPrefix = "https://hackathon2024-9e9v0z6ab-rehaanm03s-projects.vercel.app"
+const urlPrefix = "https://hackathon2024-alpha.vercel.app"
 
 const reloginURL = `${urlPrefix}/relogin`
 const dashboardURL = `${urlPrefix}/signin`
