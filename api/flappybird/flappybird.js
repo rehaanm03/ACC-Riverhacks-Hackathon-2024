@@ -11,7 +11,7 @@ let id;
 
 async function findHighScore(id) {
     try {
-        const response = await fetch(`http://localhost:3232/getScore?id=${id}`, {
+        const response = await fetch(`http://localhost:3232/getScore?id=${id}&game=flappyBird`, {
             method: "GET", // Set the request method to GET
             headers: {
                 "Content-Type": "application/json", // Set the content type to JSON

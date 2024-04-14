@@ -47,8 +47,8 @@ app.get('/getScore', async (req, res) => {
         if (scoreFile[i].DiscordID == req.query.id) {
             console.log("FOUND USER")
             console.log(scoreFile[i])
-            if (scoreFile[i]["flappyBird"]) {
-                res.json(scoreFile[i]["flappyBird"])
+            if (scoreFile[i][req.query.game]) {
+                res.json(scoreFile[i][req.query.game])
             }
             foundUser = true;
             break;
@@ -57,8 +57,22 @@ app.get('/getScore', async (req, res) => {
     console.log(scoreFile)
     if (!foundUser) {
         console.log("User not found")
+        data = {
+            "DiscordID": req.query.id,
+            "flappyBird": {
+                "roundsPlayed": 0,
+                "highestScore": 0
+            },
+            "spaceInvader": {
+                "roundsPlayed": 0,
+                "highestScore": 0
+            }
+        }
+        scoreFile.push(data)
+        res.json(data)
+        fs.writeFileSync("json/scores.json", JSON.stringify(scoreFile, null, 2), 'utf8')
+
     } else {
-        // fs.writeFileSync(JSON.stringify(scoreFile))
     }
 
 
@@ -93,7 +107,6 @@ app.post('/updateScore', jsonParser, async (req, res) => {
     if (!foundUser) {
         console.log("User not found")
     } else {
-        // fs.writeFileSync(JSON.stringify(scoreFile))
         fs.writeFileSync("json/scores.json", JSON.stringify(scoreFile, null, 2), 'utf8')
     }
     res.status(200).send("Success")
