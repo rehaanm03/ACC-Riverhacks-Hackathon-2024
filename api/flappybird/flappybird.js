@@ -6,19 +6,53 @@ let pipes;
 let score;
 let highScore;
 let gameState;
+let urlParams;
+let id;
+
+async function findHighScore(id) {
+    try {
+        const response = await fetch(`http://localhost:3232/getScore?id=${id}`, {
+            method: "GET", // Set the request method to GET
+            headers: {
+                "Content-Type": "application/json", // Set the content type to JSON
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const responseData = await response.json();
+        console.log("Score update response:", responseData);
+        console.log(highScore)
+        highScore = responseData.highestScore
+        console.log(highScore)
+
+    } catch (error) {
+        console.error("Error sending score update:", error);
+    }
+}
 
 function preload()
 {
-    birdImage = loadImage("flappybird/assets/bird.png");
-    birdWingUpImage = loadImage("flappybird/assets/birdwingup.png")
-    pipeOpeningImage = loadImage("flappybird/assets/pipe_opening.png");
-    pipeBodyImage = loadImage("flappybird/assets/pipe_body.png");
+    birdImage = loadImage("/api/flappybird/assets/bird.png");
+    birdWingUpImage = loadImage("/api/flappybird/assets/birdwingup.png")
+    pipeOpeningImage = loadImage("/api/flappybird/assets/pipe_opening.png");
+    pipeBodyImage = loadImage("/api/flappybird/assets/pipe_body.png");
+    urlParams = new URLSearchParams(window.location.search);
+
+    // Extract the value of the 'id' parameter
+    id = urlParams.get('id');
+
+    console.log("The query ID is:", id)
+    findHighScore(id)
+
 }
 
 function setup()
 {
     score = 0;
-    highScore = 0;
+    // highScore = 0;
     createCanvas(400, 400);
     bird = new Bird(30, height / 3 - birdImage.height, birdImage, birdWingUpImage);
     pipes = [];
@@ -60,6 +94,37 @@ function keyPressed()
             console.log("Invalid game state");
     }
 }
+
+async function updateScore(newScore) {
+    const data = {
+        DiscordID: id, // Replace with the actual Discord ID if needed
+        Game: "flappyBird",
+        newScore: newScore,
+    };
+
+    try {
+        const response = await fetch("http://localhost:3232/updateScore", {
+            method: "POST", // Set the request method to POST
+            headers: {
+                "Content-Type": "application/json", // Set the content type to JSON
+            },
+            body: JSON.stringify(data), // Convert the data object to a JSON string
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const responseData = await response.json();
+        console.log("Score update response:", responseData);
+
+    } catch (error) {
+        console.error("Error sending score update:", error);
+    }
+}
+
+// Example usage:
+// updateScore(5); 
 
 function draw()
 {
@@ -108,12 +173,14 @@ function draw()
     }
 
     textWithBackground("Score: " + score + "\nHigh score: " + highScore, 45, 20, 2);
+    // updateScore(score)
 
 
 
     if (gameState == GameState.GAMEOVER)
     {
         textWithBackground("You crashed! Press 'R' to restart.", width / 2, height / 2, 2);        
+        // updateScore(score)
     }
 }
 

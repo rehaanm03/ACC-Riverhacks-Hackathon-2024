@@ -2,10 +2,11 @@
 <html lang="en-US">
 
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    <title>GAMES &#8211; Nostalgic Games</title>
+    <title>Flappy bird &#8211; Nostalgic Games</title>
     <meta name='robots' content='max-image-preview:large' />
     <link rel='dns-prefetch' href='//stats.wp.com' />
     <link rel='dns-prefetch' href='//fonts.googleapis.com' />
@@ -3448,8 +3449,6 @@
         media='all' />
     <link rel='stylesheet' id='elementor-post-11-css'
         href='https://nostalgicgames.co/wp-content/uploads/elementor/css/post-11.css?ver=1713035107' media='all' />
-    <link rel='stylesheet' id='elementor-post-277-css'
-        href='https://nostalgicgames.co/wp-content/uploads/elementor/css/post-277.css?ver=1713051333' media='all' />
     <link rel='stylesheet' id='google-fonts-1-css'
         href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap&#038;ver=6.5.2'
         media='all' />
@@ -3467,15 +3466,15 @@ flexibility(document.documentElement);
         src="https://nostalgicgames.co/wp-content/plugins/wp-plugin-hostgator/vendor/newfold-labs/wp-module-patterns/assets/build/utilities.js?ver=0.1.16"
         id="nfd-wonder-blocks-utilities-js"></script>
     <link rel="https://api.w.org/" href="https://nostalgicgames.co/wp-json/" />
-    <link rel="alternate" type="application/json" href="https://nostalgicgames.co/wp-json/wp/v2/pages/277" />
+    <link rel="alternate" type="application/json" href="https://nostalgicgames.co/wp-json/wp/v2/pages/333" />
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://nostalgicgames.co/xmlrpc.php?rsd" />
     <meta name="generator" content="WordPress 6.5.2" />
-    <link rel="canonical" href="/dashboard/" />
-    <link rel='shortlink' href='https://nostalgicgames.co/?p=277' />
+    <link rel="canonical" href="/flappyBird" />
+    <link rel='shortlink' href='https://nostalgicgames.co/?p=333' />
     <link rel="alternate" type="application/json+oembed"
-        href="https://nostalgicgames.co/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnostalgicgames.co%2Fgames%2F" />
+        href="https://nostalgicgames.co/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnostalgicgames.co%2Fflappy-bird%2F" />
     <link rel="alternate" type="text/xml+oembed"
-        href="https://nostalgicgames.co/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnostalgicgames.co%2Fgames%2F&#038;format=xml" />
+        href="https://nostalgicgames.co/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnostalgicgames.co%2Fflappy-bird%2F&#038;format=xml" />
     <style>
         img#wpstats {
             display: none
@@ -3539,10 +3538,18 @@ flexibility(document.documentElement);
         content="https://i0.wp.com/nostalgicgames.co/wp-content/uploads/2024/04/cropped-logo.gif?fit=270%2C270&#038;ssl=1" />
 </head>
 
-<body onload="myFunction()" itemtype='https://schema.org/WebPage' itemscope='itemscope'
-    class="page-template-default page page-id-277 wp-custom-logo ast-desktop ast-page-builder-template ast-no-sidebar astra-4.6.11 ast-single-post ast-inherit-site-logo-transparent ast-hfb-header elementor-default elementor-kit-11 elementor-page elementor-page-277">
+<body itemtype='https://schema.org/WebPage' itemscope='itemscope'
+    class="page-template-default page page-id-333 wp-custom-logo ast-desktop ast-page-builder-template ast-no-sidebar astra-4.6.11 ast-single-post ast-inherit-site-logo-transparent ast-hfb-header elementor-default elementor-kit-11 elementor-page elementor-page-333">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js"></script>
+    <script src="../api/common/state.js"></script>
+    <script src="../api/common/drawable.js"></script>
 
-    <input type="text" id="DISCORDID" type="hidden" value=  "<%= discordUser.id %>">
+    <script src="../api/spaceinvaders/alien.js"></script>
+    <script src="../api/spaceinvaders/bullet.js"></script>
+    <script src="../api/spaceinvaders/ship.js"></script>
+    <script src="../api/spaceinvaders/spaceinvaders.js"></script>
+
+
     <a class="skip-link screen-reader-text" href="#content" role="link" title="Skip to content">
         Skip to content</a>
 
@@ -3596,9 +3603,9 @@ flexibility(document.documentElement);
                                                         <ul id="ast-hf-menu-1"
                                                             class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex  submenu-with-border stack-on-mobile">
                                                             <li id="menu-item-282"
-                                                                class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-277 current_page_item menu-item-282">
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282">
                                                                 <a href="/dashboard"
-                                                                    aria-current="page" class="menu-link">GAMES</a></li>
+                                                                    class="menu-link">GAMES</a></li>
                                                         </ul>
                                                     </div>
                                                 </nav>
@@ -3690,20 +3697,12 @@ flexibility(document.documentElement);
                                             <li class="page_item page-item-244 menu-item"><a
                                                     href="/dinoGame"
                                                     class="menu-link">Dino-Game</a></li>
-                                            <li class="page_item page-item-333 menu-item"><a
-                                                    href="/flappyBird"
-                                                    class="menu-link"
-                                                    id="flappy">Flappy bird</a></li>
-                                            <script>
-                                                function myFunction(){
-                                                    // id="flappy2"
-                                                    document.querySelector("#flappy").href = `/flappyBird?id=${document.querySelector("#DISCORDID").value}`
-                                                    document.querySelector("#flappy2").href= `/flappyBird?id=${document.querySelector("#DISCORDID").value}`
-                                                }
-                                            </script>
                                             <li
-                                                class="page_item page-item-277 current-menu-item menu-item current-menu-item">
-                                                <a href="/dashboard" class="menu-link">GAMES</a>
+                                                class="page_item page-item-333 current-menu-item menu-item current-menu-item">
+                                                <a href="/flappyBird"
+                                                    class="menu-link">Flappy bird</a></li>
+                                            <li class="page_item page-item-277 menu-item"><a
+                                                    href="/dashboard" class="menu-link">GAMES</a>
                                             </li>
                                             <li class="page_item page-item-12 menu-item"><a
                                                     href="/" class="menu-link">Home</a></li>
@@ -3730,7 +3729,7 @@ flexibility(document.documentElement);
 
 
                     <main id="main" class="site-main">
-                        <article class="post-277 page type-page status-publish ast-article-single" id="post-277"
+                        <article class="post-333 page type-page status-publish ast-article-single" id="post-333"
                             itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
 
 
@@ -3741,133 +3740,6 @@ flexibility(document.documentElement);
                             <div class="entry-content clear" itemprop="text">
 
 
-                                <div data-elementor-type="wp-page" data-elementor-id="277"
-                                    class="elementor elementor-277">
-                                    <section
-                                        class="elementor-section elementor-top-section elementor-element elementor-element-1a5a384b elementor-section-full_width elementor-section-height-min-height elementor-section-items-stretch elementor-section-height-default elementor-invisible"
-                                        data-id="1a5a384b" data-element_type="section"
-                                        data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
-                                        <div class="elementor-container elementor-column-gap-default">
-                                            <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-403afb"
-                                                data-id="403afb" data-element_type="column"
-                                                data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                                <div class="elementor-widget-wrap elementor-element-populated">
-                                                    <div class="elementor-element elementor-element-52d7f19b elementor-widget elementor-widget-heading"
-                                                        data-id="52d7f19b" data-element_type="widget"
-                                                        data-widget_type="heading.default">
-                                                        <div class="elementor-widget-container">
-                                                            <style>
-                                                                /*! elementor - v3.20.0 - 10-04-2024 */
-                                                                .elementor-heading-title {
-                                                                    padding: 0;
-                                                                    margin: 0;
-                                                                    line-height: 1
-                                                                }
-
-                                                                .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
-                                                                    color: inherit;
-                                                                    font-size: inherit;
-                                                                    line-height: inherit
-                                                                }
-
-                                                                .elementor-widget-heading .elementor-heading-title.elementor-size-small {
-                                                                    font-size: 15px
-                                                                }
-
-                                                                .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
-                                                                    font-size: 19px
-                                                                }
-
-                                                                .elementor-widget-heading .elementor-heading-title.elementor-size-large {
-                                                                    font-size: 29px
-                                                                }
-
-                                                                .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
-                                                                    font-size: 39px
-                                                                }
-
-                                                                .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
-                                                                    font-size: 59px
-                                                                }
-                                                            </style>
-                                                            <h6 class="elementor-heading-title elementor-size-default">
-                                                                <a href="/flappyBird" id="flappy2">Flappy
-                                                                    bird</a></h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-24249be5"
-                                                data-id="24249be5" data-element_type="column"
-                                                data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                                <div class="elementor-widget-wrap elementor-element-populated">
-                                                    <div class="elementor-element elementor-element-5ab7907 elementor-widget elementor-widget-heading"
-                                                        data-id="5ab7907" data-element_type="widget"
-                                                        data-widget_type="heading.default">
-                                                        <div class="elementor-widget-container">
-                                                            <h6 class="elementor-heading-title elementor-size-default">
-                                                                <a
-                                                                    href="/dinoGame">Dino-Game</a>
-                                                            </h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-467eb4ef"
-                                                data-id="467eb4ef" data-element_type="column"
-                                                data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                                <div class="elementor-widget-wrap elementor-element-populated">
-                                                    <div class="elementor-element elementor-element-63c9f017 elementor-widget elementor-widget-heading"
-                                                        data-id="63c9f017" data-element_type="widget"
-                                                        data-widget_type="heading.default">
-                                                        <div class="elementor-widget-container">
-                                                            <h6 class="elementor-heading-title elementor-size-default">
-                                                                <a href="/spaceInvader">Alien Space Invader</a></h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
-                                    <section
-                                        class="elementor-section elementor-top-section elementor-element elementor-element-4870d9e8 elementor-section-full_width elementor-section-height-min-height elementor-section-items-stretch elementor-section-height-default elementor-invisible"
-                                        data-id="4870d9e8" data-element_type="section"
-                                        data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
-                                        <div class="elementor-container elementor-column-gap-default">
-                                            <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-2d0807fe"
-                                                data-id="2d0807fe" data-element_type="column"
-                                                data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                                <div class="elementor-widget-wrap elementor-element-populated">
-                                                    <div class="elementor-element elementor-element-7e8b7190 elementor-widget elementor-widget-heading"
-                                                        data-id="7e8b7190" data-element_type="widget"
-                                                        data-widget_type="heading.default">
-                                                        <div class="elementor-widget-container">
-                                                            <h6 class="elementor-heading-title elementor-size-default">
-                                                                <a href="/crossword">NES
-                                                                    Crossword</a></h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-6b329123"
-                                                data-id="6b329123" data-element_type="column"
-                                                data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                                <div class="elementor-widget-wrap elementor-element-populated">
-                                                    <div class="elementor-element elementor-element-2e3f71ae elementor-widget elementor-widget-heading"
-                                                        data-id="2e3f71ae" data-element_type="widget"
-                                                        data-widget_type="heading.default">
-                                                        <div class="elementor-widget-container">
-                                                            <h6 class="elementor-heading-title elementor-size-default">
-                                                                <a
-                                                                    href="/mineSweeper">MineSweeper</a>
-                                                            </h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
-                                </div>
 
 
 
@@ -3905,9 +3777,6 @@ flexibility(document.documentElement);
             </div>
         </footer><!-- #colophon -->
     </div><!-- #page -->
-    <link rel='stylesheet' id='e-animations-css'
-        href='https://nostalgicgames.co/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.20.4'
-        media='all' />
     <script
         src="https://nostalgicgames.co/wp-content/plugins/wp-plugin-hostgator/vendor/newfold-labs/wp-module-ecommerce/includes/wpnavbar.js?ver=1.0"
         id="nfd_wpnavbar_setting-js"></script>
@@ -3936,22 +3805,9 @@ flexibility(document.documentElement);
     <script src="https://stats.wp.com/e-202415.js" id="jetpack-stats-js" data-wp-strategy="defer"></script>
     <script id="jetpack-stats-js-after">
         _stq = window._stq || [];
-        _stq.push(["view", JSON.parse("{\"v\":\"ext\",\"blog\":\"231894098\",\"post\":\"277\",\"tz\":\"0\",\"srv\":\"nostalgicgames.co\",\"j\":\"1:13.3.1\"}")]);
-        _stq.push(["clickTrackerInit", "231894098", "277"]);
+        _stq.push(["view", JSON.parse("{\"v\":\"ext\",\"blog\":\"231894098\",\"post\":\"333\",\"tz\":\"0\",\"srv\":\"nostalgicgames.co\",\"j\":\"1:13.3.1\"}")]);
+        _stq.push(["clickTrackerInit", "231894098", "333"]);
     </script>
-    <script src="https://nostalgicgames.co/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.20.4"
-        id="elementor-webpack-runtime-js"></script>
-    <script src="https://nostalgicgames.co/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.20.4"
-        id="elementor-frontend-modules-js"></script>
-    <script src="https://nostalgicgames.co/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2"
-        id="elementor-waypoints-js"></script>
-    <script src="https://nostalgicgames.co/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2"
-        id="jquery-ui-core-js"></script>
-    <script id="elementor-frontend-js-before">
-        var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close", "a11yCarouselWrapperAriaLabel": "Carousel | Horizontal scrolling: Arrow Left & Right", "a11yCarouselPrevSlideMessage": "Previous slide", "a11yCarouselNextSlideMessage": "Next slide", "a11yCarouselFirstSlideMessage": "This is the first slide", "a11yCarouselLastSlideMessage": "This is the last slide", "a11yCarouselPaginationBulletMessage": "Go to slide" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile Portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } }, "version": "3.20.4", "is_static": false, "experimentalFeatures": { "e_optimized_assets_loading": true, "e_optimized_css_loading": true, "e_font_icon_svg": true, "additional_custom_breakpoints": true, "container": true, "e_swiper_latest": true, "container_grid": true, "block_editor_assets_optimize": true, "ai-layout": true, "landing-pages": true, "e_image_loading_optimization": true }, "urls": { "assets": "https:\/\/nostalgicgames.co\/wp-content\/plugins\/elementor\/assets\/" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "body_background_background": "classic", "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description" }, "post": { "id": 277, "title": "GAMES%20%E2%80%93%20Nostalgic%20Games", "excerpt": "", "featuredImage": false } };
-    </script>
-    <script src="https://nostalgicgames.co/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.20.4"
-        id="elementor-frontend-js"></script>
     <script>
         /(trident|msie)/i.test(navigator.userAgent) && document.getElementById && window.addEventListener && window.addEventListener("hashchange", function () { var t, e = location.hash.substring(1); /^[A-z0-9_-]+$/.test(e) && (t = document.getElementById(e)) && (/^(?:a|select|input|button|textarea)$/i.test(t.tagName) || (t.tabIndex = -1), t.focus()) }, !1);
     </script>

@@ -5,6 +5,7 @@ const path = require('path')
 const chalk = require('chalk')
 const fs = require("fs");
 require("dotenv").config();
+const cors = require('cors');
 
 var app = express();
 var PORT = process.env.MAINPORT
@@ -17,7 +18,10 @@ const SitePrefix = process.env.URLPREFIX
 
 const theRedirectURI = `${SitePrefix}/api/discord/callback`
 
-
+app.use(cors({
+    origin: 'http://localhost:5000', // Replace with your frontend origin
+    credentials: true // Set to true if your API sends cookies
+}));
 app.set('view engine', 'ejs');
 app.use(express.static('.'));
 app.use(express.static(path.join(__dirname, 'public')))
@@ -86,6 +90,10 @@ app.get('/dinoGame', async (req, res) => {
 
 app.get('/flappyBird', async (req, res) => {
     res.render('flappyBird');
+});
+
+app.get('/spaceInvader', async (req, res) => {
+    res.render('spaceInvader');
 });
 
 app.get('/mineSweeper', async (req, res) => {
