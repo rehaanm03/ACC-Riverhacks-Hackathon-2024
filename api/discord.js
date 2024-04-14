@@ -6,8 +6,8 @@ var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({
   extended: false
 })
-// Connect to MangoDB
 const { catchAsync } = require('../utils');
+require("dotenv").config();
 
 const {
   gettingUser,
@@ -18,16 +18,12 @@ const {
   addingMemberToGuild
 } = require('./discordFunctions.js')
 
-// const CLIENT_ID = process.env.CLIENT_ID;
-// const CLIENT_SECRET = process.env.CLIENT_SECRET;
-const CLIENT_ID = '729128168341897226';
-const CLIENT_SECRET = 'LYlR4Vtv85YzherVjoPwbSPKnVxIWRkV';
+const CLIENT_ID = process.env.CLIENT_ID;
+const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const SCOPES = "identify%20guilds%20guilds.join"
 const scopes = "identify guilds guilds.join"
 
-const urlPrefix = "http://localhost:5000"
-// const urlPrefix = "https://hackathon2024-alpha.vercel.app"
-// const urlPrefix = "https://hackathon2024-9e9v0z6ab-rehaanm03s-projects.vercel.app"
+const urlPrefix = process.env.URLPREFIX;
 
 const reloginURL = `${urlPrefix}/relogin`
 const dashboardURL = `${urlPrefix}/signin`
@@ -81,7 +77,6 @@ router.get('/callback', catchAsync(async (req, res) => {
     return
   }
   if (!json) return
-  // res.redirect(`/?token=${json.access_token}`);
   console.log(chalk.cyan.bold(`Finding User with Tokens`))
   const userJSON = await gettingUser(json.access_token, res)
   if (!userJSON) return
@@ -104,27 +99,10 @@ router.get('/callback', catchAsync(async (req, res) => {
 
   console.log(req.query, userJSON)
 
-  // res.render('discordAfterLogin', {
   res.render('games', {
     qs: req.query,
     discordUser: userJSON,
-    // tools: {
-    //   targetCatchall: { key: "n/a", email: "n/a", activated: "n/a", },
-    //   targetHardemail: { key: "n/a", email: "n/a", activated: "n/a", },
-    //   undefeated: { key: "n/a", email: "n/a", activated: "n/a", },
-    //   bestbuy: { key: "n/a", email: "n/a", activated: "n/a", },
-    //   bestbuyCatchallGen: { key: "n/a", email: "n/a", activated: "n/a", },
-    //   bestbuyHardemailGen: { key: "n/a", email: "n/a", activated: "n/a", },
-    //   targetUnlocker: { key: "n/a", email: "n/a", activated: "n/a", }
-    // },
     error: {
-      // targetCatchall: '',
-      // targetHardemail: '',
-      // undefeated: '',
-      // bestbuyBot: '',
-      // bestbuyCatchallGen: '',
-      // bestbuyHardemailGen: '',
-      // targetUnlocker: '',
       error: ''
     }
   });

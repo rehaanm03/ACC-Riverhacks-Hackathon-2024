@@ -3,16 +3,15 @@ const axios = require('axios');
 const queryString = require('querystring');
 const fetch = require('node-fetch');
 const FormData = require('form-data')
-// import chalk from 'chalk';
 const chalk = require('chalk');
+require("dotenv").config();
 
-const CLIENT_ID = '729128168341897226';
-const CLIENT_SECRET = 'LYlR4Vtv85YzherVjoPwbSPKnVxIWRkV';
+const CLIENT_ID = process.env.CLIENT_ID;
+const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const SCOPES = "identify%20guilds%20guilds.join"
 const scopes = "identify guilds guilds.join"
 
-const urlPrefix = "http://localhost:5000"
-// const urlPrefix = "https://hackathon2024-alpha.vercel.app"
+const urlPrefix = process.env.URLPREFIX;
 
 const reloginURL = `${urlPrefix}/relogin`
 const dashboardURL = `${urlPrefix}/signing`

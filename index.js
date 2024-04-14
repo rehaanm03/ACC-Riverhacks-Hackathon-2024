@@ -3,19 +3,16 @@ var cookieParser = require('cookie-parser')
 var bodyParser = require('body-parser');
 const path = require('path')
 const chalk = require('chalk')
-// import chalk from 'chalk';
-// import express from 'express';
-// import cookieParser from 'cookie-parser';
-// import bodyParser from 'body-parser';
-// import path from 'path';
+const fs = require("fs");
+require("dotenv").config();
 
 var app = express();
-var PORT = process.env.PORT || 5000
+var PORT = process.env.MAINPORT
 var urlencodedParser = bodyParser.urlencoded({
     extended: false
 })
-const SitePrefix = "http://localhost:5000"
-// const SitePrefix = "https://hackathon2024-alpha.vercel.app"
+
+const SitePrefix = process.env.URLPREFIX
 
 
 const theRedirectURI = `${SitePrefix}/api/discord/callback`

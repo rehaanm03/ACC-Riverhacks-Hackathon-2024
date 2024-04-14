@@ -1,0 +1,16 @@
+[
+  {
+    "DiscordID": "222904596807417857",
+    "flappyBird": {
+      "timesPlayed": 11,
+      "highestScore": 5
+    }
+  },
+  {
+    "DiscordID": "123",
+    "flappyBird": {
+      "timesPlayed": 0,
+      "highestScore": 0
+    }
+  }
+]
