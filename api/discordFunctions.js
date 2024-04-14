@@ -15,7 +15,7 @@ const scopes = "identify guilds guilds.join"
 const urlPrefix = "https://hackathon2024-alpha.vercel.app"
 
 const reloginURL = `${urlPrefix}/relogin`
-const dashboardURL = `${urlPrefix}/dashboard`
+const dashboardURL = `${urlPrefix}/signing`
 const theRedirectURI = `${urlPrefix}/api/discord/callback`
 const redirect = encodeURIComponent(`${urlPrefix}/api/discord/callback`);
 

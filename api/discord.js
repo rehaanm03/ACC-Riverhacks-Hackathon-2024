@@ -30,7 +30,7 @@ const urlPrefix = "https://hackathon2024-alpha.vercel.app"
 // const urlPrefix = "https://hackathon2024-9e9v0z6ab-rehaanm03s-projects.vercel.app"
 
 const reloginURL = `${urlPrefix}/relogin`
-const dashboardURL = `${urlPrefix}/dashboard`
+const dashboardURL = `${urlPrefix}/signin`
 const theRedirectURI = `${urlPrefix}/api/discord/callback`
 const redirect = encodeURIComponent(`${urlPrefix}/api/discord/callback`);
 const redirectForPurchase = encodeURIComponent(`${urlPrefix}/purchasenow`);

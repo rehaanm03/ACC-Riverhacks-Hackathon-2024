@@ -47,7 +47,7 @@ app.get('/relogin', async (req, res) => {
         }
     });
 });
-app.get('/dashboard', async (req, res) => {
+app.get('/signin', async (req, res) => {
     res.render('discordLogin', {
         qs: req.query,
         error: {
