@@ -14,8 +14,8 @@ var PORT = process.env.PORT || 5000
 var urlencodedParser = bodyParser.urlencoded({
     extended: false
 })
-// const SitePrefix = "http://localhost:5000"
-const SitePrefix = "https://hackathon2024-alpha.vercel.app"
+const SitePrefix = "http://localhost:5000"
+// const SitePrefix = "https://hackathon2024-alpha.vercel.app"
 
 
 const theRedirectURI = `${SitePrefix}/api/discord/callback`
@@ -47,7 +47,7 @@ app.get('/relogin', async (req, res) => {
         }
     });
 });
-app.get('/signin', async (req, res) => {
+app.get('/dashboard', async (req, res) => {
     res.render('discordLogin', {
         qs: req.query,
         error: {

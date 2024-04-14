@@ -11,16 +11,13 @@ const CLIENT_SECRET = 'LYlR4Vtv85YzherVjoPwbSPKnVxIWRkV';
 const SCOPES = "identify%20guilds%20guilds.join"
 const scopes = "identify guilds guilds.join"
 
-// const urlPrefix = "http://localhost:5000"
-// https://hackathon2024-9e9v0z6ab-rehaanm03s-projects.vercel.app/
-const urlPrefix = "https://hackathon2024-alpha.vercel.app"
+const urlPrefix = "http://localhost:5000"
+// const urlPrefix = "https://hackathon2024-alpha.vercel.app"
 
 const reloginURL = `${urlPrefix}/relogin`
-const dashboardURL = `${urlPrefix}/signin`
+const dashboardURL = `${urlPrefix}/dashboard`
 const theRedirectURI = `${urlPrefix}/api/discord/callback`
-const thePurchaseNowRedirectURI = `${urlPrefix}/purchasenow`
 const redirect = encodeURIComponent(`${urlPrefix}/api/discord/callback`);
-const redirectForPurchase = encodeURIComponent(`${urlPrefix}/purchasenow`);
 
 async function gettingUser(token, res) {
   const discordInfo = await fetch('http://discord.com/api/users/@me', {
