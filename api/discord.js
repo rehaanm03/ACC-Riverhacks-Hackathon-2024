@@ -103,7 +103,8 @@ router.get('/callback', catchAsync(async (req, res) => {
 
   console.log(req.query, userJSON)
 
-  res.render('discordAfterLogin', {
+  // res.render('discordAfterLogin', {
+  res.render('games', {
     qs: req.query,
     discordUser: userJSON,
     // tools: {

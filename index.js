@@ -83,6 +83,21 @@ app.get('/crossword', async (req, res) => {
     res.render('crossword');
 });
 
+app.get('/dinoGame', async (req, res) => {
+    res.render('dinoGame');
+});
+
+app.get('/flappyBird', async (req, res) => {
+    res.render('flappyBird');
+});
+
+app.get('/mineSweeper', async (req, res) => {
+    res.render('mineSweeper');
+});
+
+app.get('/games', async(req, res) => {
+    res.redirect('/dashboard')
+})
 
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`))

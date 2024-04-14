@@ -7,7 +7,9 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <title>NES Crossword &#8211; Nostalgic Games</title>
     <meta name='robots' content='max-image-preview:large' />
+    <link rel='dns-prefetch' href='//stats.wp.com' />
     <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <link rel='dns-prefetch' href='//i0.wp.com' />
     <link rel="alternate" type="application/rss+xml" title="Nostalgic Games &raquo; Feed"
         href="https://nostalgicgames.co/feed/" />
     <link rel="alternate" type="application/rss+xml" title="Nostalgic Games &raquo; Comments Feed"
@@ -2088,6 +2090,8 @@
         .site-below-footer-wrap[data-section="section-below-footer-builder"] {
             background-color: var(--ast-global-color-5);
             ;
+            background-image: none;
+            ;
             min-height: 80px;
             border-style: solid;
             border-width: 0px;
@@ -2847,6 +2851,53 @@
             padding: 0 !important;
         }
     </style>
+    <link rel='stylesheet' id='mediaelement-css'
+        href='https://nostalgicgames.co/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17'
+        media='all' />
+    <link rel='stylesheet' id='wp-mediaelement-css'
+        href='https://nostalgicgames.co/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=6.5.2' media='all' />
+    <style id='jetpack-sharing-buttons-style-inline-css'>
+        .jetpack-sharing-buttons__services-list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 0;
+            list-style-type: none;
+            margin: 5px;
+            padding: 0
+        }
+
+        .jetpack-sharing-buttons__services-list.has-small-icon-size {
+            font-size: 12px
+        }
+
+        .jetpack-sharing-buttons__services-list.has-normal-icon-size {
+            font-size: 16px
+        }
+
+        .jetpack-sharing-buttons__services-list.has-large-icon-size {
+            font-size: 24px
+        }
+
+        .jetpack-sharing-buttons__services-list.has-huge-icon-size {
+            font-size: 36px
+        }
+
+        @media print {
+            .jetpack-sharing-buttons__services-list {
+                display: none !important
+            }
+        }
+
+        .editor-styles-wrapper .wp-block-jetpack-sharing-buttons {
+            gap: 0;
+            padding-inline-start: 0
+        }
+
+        ul.jetpack-sharing-buttons__services-list.has-background {
+            padding: 1.25em 2.375em
+        }
+    </style>
     <link rel='stylesheet' id='nfd-wonder-blocks-utilities-css'
         href='https://nostalgicgames.co/wp-content/plugins/wp-plugin-hostgator/vendor/newfold-labs/wp-module-patterns/assets/build/utilities.css?ver=0.1.16'
         media='all' />
@@ -3419,12 +3470,17 @@ flexibility(document.documentElement);
     <link rel="alternate" type="application/json" href="https://nostalgicgames.co/wp-json/wp/v2/pages/207" />
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://nostalgicgames.co/xmlrpc.php?rsd" />
     <meta name="generator" content="WordPress 6.5.2" />
-    <link rel="canonical" href="https://nostalgicgames.co/crossword-nes/" />
+    <link rel="canonical" href="/crossword" />
     <link rel='shortlink' href='https://nostalgicgames.co/?p=207' />
     <link rel="alternate" type="application/json+oembed"
         href="https://nostalgicgames.co/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnostalgicgames.co%2Fcrossword-nes%2F" />
     <link rel="alternate" type="text/xml+oembed"
         href="https://nostalgicgames.co/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnostalgicgames.co%2Fcrossword-nes%2F&#038;format=xml" />
+    <style>
+        img#wpstats {
+            display: none
+        }
+    </style>
     <style>
         #nfd-site-status {
             align-items: center;
@@ -3471,6 +3527,16 @@ flexibility(document.documentElement);
     </style>
     <meta name="generator"
         content="Elementor 3.20.4; features: e_optimized_assets_loading, e_optimized_css_loading, e_font_icon_svg, additional_custom_breakpoints, block_editor_assets_optimize, e_image_loading_optimization; settings: css_print_method-external, google_font-enabled, font_display-swap">
+    <link rel="icon"
+        href="https://i0.wp.com/nostalgicgames.co/wp-content/uploads/2024/04/cropped-logo.gif?fit=32%2C32&#038;ssl=1"
+        sizes="32x32" />
+    <link rel="icon"
+        href="https://i0.wp.com/nostalgicgames.co/wp-content/uploads/2024/04/cropped-logo.gif?fit=192%2C192&#038;ssl=1"
+        sizes="192x192" />
+    <link rel="apple-touch-icon"
+        href="https://i0.wp.com/nostalgicgames.co/wp-content/uploads/2024/04/cropped-logo.gif?fit=180%2C180&#038;ssl=1" />
+    <meta name="msapplication-TileImage"
+        content="https://i0.wp.com/nostalgicgames.co/wp-content/uploads/2024/04/cropped-logo.gif?fit=270%2C270&#038;ssl=1" />
 </head>
 
 <body itemtype='https://schema.org/WebPage' itemscope='itemscope'
@@ -3498,11 +3564,11 @@ flexibility(document.documentElement);
                                         <div class="site-branding ast-site-identity"
                                             itemtype="https://schema.org/Organization" itemscope="itemscope">
                                             <span class="site-logo-img"><a href="/"
-                                                    class="custom-logo-link" rel="home"><img fetchpriority="high"
-                                                        width="707" height="480"
-                                                        src="https://nostalgicgames.co/wp-content/uploads/2024/04/logo.gif"
+                                                    class="custom-logo-link" rel="home"><img width="120" height="81"
+                                                        src="https://nostalgicgames.co/wp-content/uploads/2024/04/logo-120x81.gif"
                                                         class="custom-logo" alt="Nostalgic Games" decoding="async"
-                                                        srcset="https://nostalgicgames.co/wp-content/uploads/2024/04/logo.gif" /></a></span>
+                                                        srcset="https://nostalgicgames.co/wp-content/uploads/2024/04/logo.gif"
+                                                        sizes="(max-width: 120px) 100vw, 120px" /></a></span>
                                             <div class="ast-site-title-wrap">
                                                 <span class="site-title" itemprop="name">
                                                     <a href="/" rel="home" itemprop="url">
@@ -3520,22 +3586,18 @@ flexibility(document.documentElement);
                                     <div class="ast-builder-menu-1 ast-builder-menu ast-flex ast-builder-menu-1-focus-item ast-builder-layout-element site-header-focus-item"
                                         data-section="section-hb-menu-1">
                                         <div class="ast-main-header-bar-alignment">
-                                            <div class="main-header-bar-navigation ast-flex-1">
-                                                <nav class="site-navigation" id="primary-site-navigation"
+                                            <div class="main-header-bar-navigation">
+                                                <nav class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item"
+                                                    id="primary-site-navigation-desktop" aria-label="Site Navigation"
                                                     itemtype="https://schema.org/SiteNavigationElement"
-                                                    itemscope="itemscope"
-                                                    class="ast-flex-grow-1 navigation-accessibility"
-                                                    aria-label="Site Navigation">
-                                                    <div id="ast-hf-menu-1" class="main-navigation ast-inline-flex">
-                                                        <ul
+                                                    itemscope="itemscope">
+                                                    <div class="main-navigation ast-inline-flex">
+                                                        <ul id="ast-hf-menu-1"
                                                             class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex  submenu-with-border stack-on-mobile">
-                                                            <li class="page_item page-item-12 menu-item"><a
-                                                                    href="/"
-                                                                    class="menu-link">Home</a></li>
-                                                            <li
-                                                                class="page_item page-item-207 current-menu-item menu-item current-menu-item">
-                                                                <a href="/crossword"
-                                                                    class="menu-link">NES Crossword</a></li>
+                                                            <li id="menu-item-282"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282">
+                                                                <a href="/dashboard"
+                                                                    class="menu-link">GAMES</a></li>
                                                         </ul>
                                                     </div>
                                                 </nav>
@@ -3562,11 +3624,11 @@ flexibility(document.documentElement);
                                     <div class="site-branding ast-site-identity"
                                         itemtype="https://schema.org/Organization" itemscope="itemscope">
                                         <span class="site-logo-img"><a href="/"
-                                                class="custom-logo-link" rel="home"><img fetchpriority="high"
-                                                    width="707" height="480"
-                                                    src="https://nostalgicgames.co/wp-content/uploads/2024/04/logo.gif"
+                                                class="custom-logo-link" rel="home"><img width="120" height="81"
+                                                    src="https://nostalgicgames.co/wp-content/uploads/2024/04/logo-120x81.gif"
                                                     class="custom-logo" alt="Nostalgic Games" decoding="async"
-                                                    srcset="https://nostalgicgames.co/wp-content/uploads/2024/04/logo.gif" /></a></span>
+                                                    srcset="https://nostalgicgames.co/wp-content/uploads/2024/04/logo.gif"
+                                                    sizes="(max-width: 120px) 100vw, 120px" /></a></span>
                                         <div class="ast-site-title-wrap">
                                             <span class="site-title" itemprop="name">
                                                 <a href="/" rel="home" itemprop="url">
@@ -3624,11 +3686,23 @@ flexibility(document.documentElement);
                                     <div id="ast-hf-mobile-menu" class="main-navigation">
                                         <ul
                                             class="main-header-menu ast-nav-menu ast-flex  submenu-with-border astra-menu-animation-fade  stack-on-mobile">
+                                            <li class="page_item page-item-244 menu-item"><a
+                                                    href="/dinoGame"
+                                                    class="menu-link">Dino-Game</a></li>
+                                            <li class="page_item page-item-333 menu-item"><a
+                                                    href="/flappyBird"
+                                                    class="menu-link">Flappy bird</a></li>
+                                            <li class="page_item page-item-277 menu-item"><a
+                                                    href="/dashboard" class="menu-link">GAMES</a>
+                                            </li>
                                             <li class="page_item page-item-12 menu-item"><a
                                                     href="/" class="menu-link">Home</a></li>
+                                            <li class="page_item page-item-289 menu-item"><a
+                                                    href="/mineSweeper"
+                                                    class="menu-link">MineSweeper</a></li>
                                             <li
                                                 class="page_item page-item-207 current-menu-item menu-item current-menu-item">
-                                                <a href="https://nostalgicgames.co/crossword-nes/" class="menu-link">NES
+                                                <a href="/crossword" class="menu-link">NES
                                                     Crossword</a></li>
                                         </ul>
                                     </div>
@@ -3709,8 +3783,7 @@ flexibility(document.documentElement);
                             <div class="ast-builder-layout-element ast-flex site-footer-focus-item ast-footer-copyright"
                                 data-section="section-footer-builder">
                                 <div class="ast-footer-copyright">
-                                    <p>Copyright &copy; 2024 Nostalgic Games | Powered by <a href="https://wpastra.com/"
-                                            rel="nofollow noopener" target="_blank">Astra WordPress Theme</a></p>
+                                    <p>Copyright &copy; 2024 Nostalgic Games</p>
                                 </div>
                             </div>
                         </div>
@@ -3739,6 +3812,9 @@ flexibility(document.documentElement);
     </script>
     <script src="https://nostalgicgames.co/wp-content/themes/astra/assets/js/minified/frontend.min.js?ver=4.6.11"
         id="astra-theme-js-js"></script>
+    <script
+        src="https://nostalgicgames.co/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-image-cdn/dist/image-cdn.js?minify=false&amp;ver=132249e245926ae3e188"
+        id="jetpack-photon-js"></script>
     <script src="https://nostalgicgames.co/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2"
         id="wp-polyfill-inert-js"></script>
     <script src="https://nostalgicgames.co/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.14.0"
@@ -3753,6 +3829,12 @@ flexibility(document.documentElement);
     <script
         src="https://nostalgicgames.co/wp-content/plugins/astra-sites/inc/lib/onboarding/assets/dist/template-preview/main.js?ver=06758d4d807d9d22c6ea"
         id="starter-templates-zip-preview-js"></script>
+    <script src="https://stats.wp.com/e-202415.js" id="jetpack-stats-js" data-wp-strategy="defer"></script>
+    <script id="jetpack-stats-js-after">
+        _stq = window._stq || [];
+        _stq.push(["view", JSON.parse("{\"v\":\"ext\",\"blog\":\"231894098\",\"post\":\"207\",\"tz\":\"0\",\"srv\":\"nostalgicgames.co\",\"j\":\"1:13.3.1\"}")]);
+        _stq.push(["clickTrackerInit", "231894098", "207"]);
+    </script>
     <script src="https://nostalgicgames.co/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.20.4"
         id="elementor-webpack-runtime-js"></script>
     <script src="https://nostalgicgames.co/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.20.4"
