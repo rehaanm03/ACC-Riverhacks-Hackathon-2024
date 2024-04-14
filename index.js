@@ -15,7 +15,7 @@ var urlencodedParser = bodyParser.urlencoded({
     extended: false
 })
 // const SitePrefix = "http://localhost:5000"
-const SitePrefix = "https://hackathon2024-alpha.vercel.app/"
+const SitePrefix = "https://hackathon2024-alpha.vercel.app"
 
 
 const theRedirectURI = `${SitePrefix}/api/discord/callback`
