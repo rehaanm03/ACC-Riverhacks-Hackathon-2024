@@ -29,7 +29,6 @@ const reloginURL = `${urlPrefix}/relogin`
 const dashboardURL = `${urlPrefix}/signin`
 const theRedirectURI = `${urlPrefix}/api/discord/callback`
 const redirect = encodeURIComponent(`${urlPrefix}/api/discord/callback`);
-const redirectForPurchase = encodeURIComponent(`${urlPrefix}/purchasenow`);
 
 router.get('/login', (req, res) => {
   res.redirect(`https://discord.com/api/oauth2/authorize?client_id=${CLIENT_ID}&scope=${SCOPES}&response_type=code&redirect_uri=${redirect}`);

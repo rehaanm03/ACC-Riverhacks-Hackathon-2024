@@ -3539,9 +3539,10 @@ flexibility(document.documentElement);
         content="https://i0.wp.com/nostalgicgames.co/wp-content/uploads/2024/04/cropped-logo.gif?fit=270%2C270&#038;ssl=1" />
 </head>
 
-<body itemtype='https://schema.org/WebPage' itemscope='itemscope'
+<body onload="myFunction()" itemtype='https://schema.org/WebPage' itemscope='itemscope'
     class="page-template-default page page-id-277 wp-custom-logo ast-desktop ast-page-builder-template ast-no-sidebar astra-4.6.11 ast-single-post ast-inherit-site-logo-transparent ast-hfb-header elementor-default elementor-kit-11 elementor-page elementor-page-277">
 
+    <input type="text" id="DISCORDID" type="hidden" value=  "<%= discordUser.id %>">
     <a class="skip-link screen-reader-text" href="#content" role="link" title="Skip to content">
         Skip to content</a>
 
@@ -3691,7 +3692,15 @@ flexibility(document.documentElement);
                                                     class="menu-link">Dino-Game</a></li>
                                             <li class="page_item page-item-333 menu-item"><a
                                                     href="/flappyBird"
-                                                    class="menu-link">Flappy bird</a></li>
+                                                    class="menu-link"
+                                                    id="flappy">Flappy bird</a></li>
+                                            <script>
+                                                function myFunction(){
+                                                    // id="flappy2"
+                                                    document.querySelector("#flappy").href = `/flappyBird?id=${document.querySelector("#DISCORDID").value}`
+                                                    document.querySelector("#flappy2").href= `/flappyBird?id=${document.querySelector("#DISCORDID").value}`
+                                                }
+                                            </script>
                                             <li
                                                 class="page_item page-item-277 current-menu-item menu-item current-menu-item">
                                                 <a href="/dashboard" class="menu-link">GAMES</a>
@@ -3782,7 +3791,7 @@ flexibility(document.documentElement);
                                                                 }
                                                             </style>
                                                             <h6 class="elementor-heading-title elementor-size-default">
-                                                                <a href="/flappyBird">Flappy
+                                                                <a href="/flappyBird" id="flappy2">Flappy
                                                                     bird</a></h6>
                                                         </div>
                                                     </div>
