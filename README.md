@@ -1,4 +1,4 @@
-# Hackathon2024
+# Hackathon2024 - Nostalgic Games
 
 # Prerequisite
 * Node.js
