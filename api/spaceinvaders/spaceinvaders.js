@@ -10,6 +10,7 @@ let gameState;
 let lives;
 let bullets;
 let score;
+let highScore;
 
 function preload()
 {
@@ -28,6 +29,7 @@ function setup()
     alienSpawnMaxTime = 1000;
     gameState = GameState.TITLE;
     score = 0;
+    highScore = 0;
 }
 
 function keyPressed()
@@ -57,6 +59,8 @@ function keyPressed()
         case GameState.GAMEOVER:
             if (key == 'r')
             {
+                movingLeft = false;
+                movingRight = false;
                 alienSpawnTimer = 0;
                 alienSpawnMaxTime = 1000;
                 lives = 3;
@@ -65,6 +69,10 @@ function keyPressed()
                 while (aliens.length > 0)
                 {
                     aliens.pop();
+                }
+                while (bullets.length > 0)
+                {
+                    bullets.pop();
                 }
                 gameState = GameState.PLAYING;
             }
@@ -141,6 +149,10 @@ function draw()
                     alien.alive = false;
                     if (lives <= 0)
                     {
+                        if (score > highScore)
+                        {
+                            highScore = score;
+                        }
                         gameState = GameState.GAMEOVER;
                     }
                 }
@@ -209,6 +221,6 @@ function draw()
 
     push();
     fill(255);
-    text("Score: " + score + "\nLives: " + lives, 20, 20);
+    text("Score: " + score + "\nHigh Score: " + highScore + "\nLives: " + lives, 20, 20);
     pop();
 }
