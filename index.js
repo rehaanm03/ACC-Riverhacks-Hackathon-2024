@@ -19,7 +19,7 @@ const SitePrefix = process.env.URLPREFIX
 const theRedirectURI = `${SitePrefix}/api/discord/callback`
 
 app.use(cors({
-    origin: 'http://localhost:5000', // Replace with your frontend origin
+    origin: SitePrefix, // Replace with your frontend origin
     credentials: true // Set to true if your API sends cookies
 }));
 app.set('view engine', 'ejs');
