@@ -25,7 +25,8 @@ const CLIENT_SECRET = 'LYlR4Vtv85YzherVjoPwbSPKnVxIWRkV';
 const SCOPES = "identify%20guilds%20guilds.join"
 const scopes = "identify guilds guilds.join"
 
-const urlPrefix = "http://localhost:5000"
+// const urlPrefix = "http://localhost:5000"
+const urlPrefix = "https://hackathon2024-9e9v0z6ab-rehaanm03s-projects.vercel.app"
 // const urlPrefix = "https://rehaan-aio.herokuapp.com"
 
 const reloginURL = `${urlPrefix}/relogin`
