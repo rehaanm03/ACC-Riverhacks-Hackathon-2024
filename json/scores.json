@@ -6,8 +6,8 @@
       "highestScore": 6
     },
     "spaceInvader": {
-      "roundsPlayed": 0,
-      "highestScore": 0
+      "roundsPlayed": 26,
+      "highestScore": 1400
     }
   },
   {
@@ -41,6 +41,17 @@
     "spaceInvader": {
       "roundsPlayed": 5,
       "highestScore": 5
+    }
+  },
+  {
+    "DiscordID": "168199561419030528",
+    "flappyBird": {
+      "roundsPlayed": 0,
+      "highestScore": 0
+    },
+    "spaceInvader": {
+      "roundsPlayed": 2,
+      "highestScore": 200
     }
   }
 ]

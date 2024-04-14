@@ -26,6 +26,7 @@ async function findHighScore(id) {
         console.log("Score update response:", responseData);
         console.log(highScore)
         highScore = responseData.highestScore
+        if (!responseData.highestScore) highScore= 0
         console.log(highScore)
 
     } catch (error) {

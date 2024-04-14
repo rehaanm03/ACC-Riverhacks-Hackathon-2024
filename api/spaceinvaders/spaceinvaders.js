@@ -18,6 +18,61 @@ function preload()
     alienImage = loadImage("/api/spaceinvaders/assets/alien.png");
 }
 
+async function findHighScore(id) {
+    try {
+        const response = await fetch(`http://localhost:3232/getScore?id=${id}&game=spaceInvader`, {
+            method: "GET", // Set the request method to GET
+            headers: {
+                "Content-Type": "application/json", // Set the content type to JSON
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const responseData = await response.json();
+        console.log("Score update response:", responseData);
+        console.log(highScore)
+        highScore = responseData.highestScore
+        if (!responseData.highestScore) highScore = 0
+        console.log(highScore)
+
+    } catch (error) {
+        console.error("Error sending score update:", error);
+    }
+}
+
+async function updateScore(newScore) {
+    const data = {
+        DiscordID: id, // Replace with the actual Discord ID if needed
+        Game: "spaceInvader",
+        newScore: newScore,
+    };
+
+    try {
+        const response = await fetch("http://localhost:3232/updateScore", {
+            method: "POST", // Set the request method to POST
+            headers: {
+                "Content-Type": "application/json", // Set the content type to JSON
+            },
+            body: JSON.stringify(data), // Convert the data object to a JSON string
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const responseData = await response.json();
+        console.log("Score update response:", responseData);
+
+    } catch (error) {
+        console.error("Error sending score update:", error);
+    }
+}
+
+
+
 function setup()
 {
     createCanvas(800, 600);
@@ -30,6 +85,14 @@ function setup()
     gameState = GameState.TITLE;
     score = 0;
     highScore = 0;
+    urlParams = new URLSearchParams(window.location.search);
+
+    // Extract the value of the 'id' parameter
+    id = urlParams.get('id');
+
+    console.log("The query ID is:", id)
+    findHighScore(id)
+
 }
 
 function keyPressed()
@@ -93,6 +156,7 @@ function bulletCollision()
                     bullet.alive = false;
                     alien.alive = false;
                     score += 100;
+                    updateScore(score)
                 }
             }
         }

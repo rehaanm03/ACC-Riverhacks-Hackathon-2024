@@ -3539,10 +3539,15 @@ flexibility(document.documentElement);
         content="https://i0.wp.com/nostalgicgames.co/wp-content/uploads/2024/04/cropped-logo.gif?fit=270%2C270&#038;ssl=1" />
 </head>
 
+<style>
+    .SOMETHING {
+        display: none
+    }
+</style>
 <body onload="myFunction()" itemtype='https://schema.org/WebPage' itemscope='itemscope'
     class="page-template-default page page-id-277 wp-custom-logo ast-desktop ast-page-builder-template ast-no-sidebar astra-4.6.11 ast-single-post ast-inherit-site-logo-transparent ast-hfb-header elementor-default elementor-kit-11 elementor-page elementor-page-277">
 
-    <input type="text" id="DISCORDID" type="hidden" value=  "<%= discordUser.id %>">
+    <input class="SOMETHING" type="text" id="DISCORDID" type="hidden" value=  "<%= discordUser.id %>">
     <a class="skip-link screen-reader-text" href="#content" role="link" title="Skip to content">
         Skip to content</a>
 
@@ -3699,6 +3704,8 @@ flexibility(document.documentElement);
                                                     // id="flappy2"
                                                     document.querySelector("#flappy").href = `/flappyBird?id=${document.querySelector("#DISCORDID").value}`
                                                     document.querySelector("#flappy2").href= `/flappyBird?id=${document.querySelector("#DISCORDID").value}`
+                                                    // document.querySelector("#space").href = `/spaceInvader?id=${document.querySelector("#DISCORDID").value}`
+                                                    document.querySelector("#space2").href = `/spaceInvader?id=${document.querySelector("#DISCORDID").value}`
                                                 }
                                             </script>
                                             <li
@@ -3822,7 +3829,7 @@ flexibility(document.documentElement);
                                                         data-widget_type="heading.default">
                                                         <div class="elementor-widget-container">
                                                             <h6 class="elementor-heading-title elementor-size-default">
-                                                                <a href="/spaceInvader">Alien Space Invader</a></h6>
+                                                                <a href="/spaceInvader"  id="space2">Alien Space Invader</a></h6>
                                                         </div>
                                                     </div>
                                                 </div>
